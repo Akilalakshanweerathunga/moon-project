@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Your company name</title>
+        <link rel="icon" href="moon.png" type="image/gif/png">
+        <link rel="stylesheet" type="text/css" href="moon.css">
+    </head>
+    <body>
+        <header>
+            <a href="#" class="logo">logo</a>
+            <ul>
+                <li><a href="#" class="active">HOME</a></li>
+                <li><a href="#">WORK</a></li>
+                <li><a href="#">ABOUT</a></li>
+                <li><a href="#">CONTACT</a></li>
+            </ul>
+        </header>
+        <section>
+            <img src="stars.png" id="stars">
+            <img src="moon.png" id="moon">
+            <img src="mountains_behind.png" id="mountains_behind">
+            <h2 id="text">Moon Light</h2>
+            <a href="#" id="btn">Explore</a>
+            <img src="mountains_front.png" id="mountains_front">
+        </section>
+        <div class="sec">
+            <h2>Parallax Scrolling Effects</h2>
+            <p>Lorem ipsum dolor sit amet. Sed recusandae tempora a omnis consequatur sit laudantium sequi. Qui autem assumenda eos doloribus mollitia ex error commodi qui nihil commodi. <br><br>Cum molestiae nihil et maiores porro ea dicta quia. Id nulla temporibus hic sint voluptatem At eligendi doloremque eos voluptatem rerum sit dignissimos illum aut officiis sequi. Ut veritatis architecto eos aperiam enim in neque animi qui dolor ipsum et natus perspiciatis est voluptatibus tempora. <br><br>Et accusamus consequatur est eaque dolorem non voluptate autem et vero voluptas. Ex exercitationem cumque 33 doloremque aperiam sed galisum temporibus At assumenda quisquam. Eum facere praesentium et eligendi accusantium sit quam sint ad dolorem voluptatem a harum autem. Qui cumque earum eos quam  qui nesciunt assumenda sed consequuntur deleniti ut reprehenderit iste.<br><br> Aut quos ullam ex sunt distinctio est nisi quod ut sint quas! 33 harum magni in laudantium perspiciatis qui dolorem perferendis sed accusantium nemo! A officia voluptas qui ducimus corporis ea impedit repellat eos quia eveniet. Est molestiae quisquam aut internos corrupti aut nulla illum ut voluptatibus repellendus? <br><br>Lorem ipsum dolor sit amet. Sed recusandae tempora a omnis consequatur sit laudantium sequi. Qui autem assumenda eos doloribus mollitia ex error commodi qui nihil commodi. Cum molestiae nihil et maiores porro ea dicta quia. Id nulla temporibus hic sint voluptatem At eligendi doloremque eos voluptatem rerum sit dignissimos illum aut officiis sequi. Ut veritatis architecto eos aperiam enim in neque animi qui dolor ipsum et natus perspiciatis est voluptatibus tempora.</p>
+        </div>
+        <script>
+            let stars = document.getElementById('stars');
+            let moon = document.getElementById('moon');
+            let mountains_behind = document.getElementById('mountains_behind');
+            let text= document.getElementById('text');
+            let btn = document.getElementById('btn');
+            let mountains_front = document.getElementById('mountains_front');
+            let header = document.querySelector('header');
+
+            window.addEventListener('scroll', function(){
+                let value = window.scrollY;
+                stars.style.left = value * 0.25 +'px';
+                moon.style.top = value * 1.05 +'px';
+                mountains_behind.style.top = value * 0.5 +'px';
+                mountains_front.style.top = value * 0 +'px';
+                text.style.marginRight = value * 4 +'px';
+                text.style.marginTop = value * 1.5 +'px';
+                btn.style.marginTop = value * 1.5 +'px';
+                header.style.top = value * 0.5 + 'px';
+            })
+        </script>
+    </body>
+</html>
